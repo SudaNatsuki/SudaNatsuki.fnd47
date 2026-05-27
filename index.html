@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-icons">
+      <button class="icon-button" id="openModalButton">
+        ＋
+      </button>
+
+      <button class="icon-button like-header-button" id="favoriteButton">
+        🤍
+        <span class="like-badge" id="likeBadge">0</span>
+      </button>
+
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="upload-slider" id="uploadSlider">
+      <!-- JSでアップロード画像を追加 -->
+    </section>
+    <div class="tab-group">
+      <button class="tab-button active" data-filter="all">ALL</button>
+      <button class="tab-button animal" data-filter="animal">ANIMAL</button>
+      <button class="tab-button person" data-filter="person">PERSON</button>
+      <button class="tab-button landscape" data-filter="landscape">LANDSCAPE</button>
+      <button class="tab-button food" data-filter="food">FOOD</button>
+      <button class="tab-button vehicle" data-filter="vehicle">VEHICLE</button>
+      <button class="tab-button plant" data-filter="plant">PLANT</button>
+    </div>
+    <section class="file-list" id="fileList">
+      <!-- JSで追加 -->
+    </section>
+  </main>
+
+  <div class="modal" id="uploadModal">
+    <div class="modal-content">
+      <h2>ファイルをアップロード</h2>
+
+      <label class="form-label">画像を選択</label>
+      <input type="file" id="fileInput" class="file-input">
+
+
+
+      <label class="form-label">タイトル</label>
+      <input type="text" id="titleInput" class="title-input" placeholder="タイトルを入力">
+      <label class="form-label">カテゴリー</label>
+
+      <div class="category-group">
+        <button class="category-button animal active" data-category="animal">ANIMAL</button>
+        <button class="category-button person" data-category="person">PERSON</button>
+        <button class="category-button landscape" data-category="landscape">LANDSCAPE</button>
+        <button class="category-button food" data-category="food">FOOD</button>
+        <button class="category-button vehicle" data-category="vehicle">VEHICLE</button>
+        <button class="category-button plant" data-category="plant">PLANT</button>
+      </div>
+
+
+      <div class="modal-buttons">
+        <button class="cancel-button" id="closeModalButton">
+          キャンセル
+        </button>
+
+        <button class="upload-button" id="uploadButton">
+          アップロード
+        </button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
