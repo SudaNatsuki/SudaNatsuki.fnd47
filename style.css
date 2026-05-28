@@ -419,11 +419,13 @@ body {
   overflow: hidden;
   scroll-snap-align: center;
   flex-shrink: 0;
+  background-color: #f3f4f6;
+  margin-top: 20px;
 }
 
 .slider-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
